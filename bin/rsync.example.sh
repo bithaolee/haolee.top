@@ -8,7 +8,7 @@ exclude_file=$webdir/bin/exclude.txt
 cd $webdir
 
 source_dir=$webdir/
-dest_dir="[username]@[yourip]:[/path/to/website]"
-rsync $source_dir $dest_dir -arlpDvzh --exclude-from $exclude_file
+dest_dir="[username]@[yourip]:[module][module_sub_path]"
+rsync $source_dir $dest_dir -avP --exclude-from $exclude_file
 
 echo 'done.'
